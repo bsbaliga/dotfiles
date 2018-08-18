@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DISK_COUNT=$(ls -1 /media | wc -l)
+
+case $BLOCK_BUTTON in
+    1) if [[ $DISK_COUNT -ne 0 ]]; then $TERMINAL -e ranger /media; fi;;
+    3) if [[ $DISK_COUNT -eq 0 ]]; then udiskie-mount -a 1>/dev/null; else udiskie-umount -a 1>/dev/null; fi;;
+esac
+
+pkill -RTMIN+9 i3blocks
+echo $(ls -1 /media | wc -l)
+
+
+
+

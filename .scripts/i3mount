@@ -8,8 +8,6 @@ case $BLOCK_BUTTON in
 esac
 
 pkill -RTMIN+9 i3blocks
-echo $(ls -1 /media | wc -l)
-
-
+echo "<span color='#ff8000'></span><span color='#232423'>. </span>$(ls -1 /media | wc -l)"
 
 

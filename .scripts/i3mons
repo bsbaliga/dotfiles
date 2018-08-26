@@ -1,0 +1,9 @@
+#!/bin/bash
+
+MONITOR_COUNT=$(mons | sed -n 's/Monitors: \([0-9]\)/\1/p')
+
+if [[ 2 == $MONITOR_COUNT ]]; then
+  mons --primary HDMI1 -e right
+fi
+
+DISPLAY=:0 feh --bg-scale ~/.config/wall.png

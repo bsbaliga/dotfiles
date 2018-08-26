@@ -1,0 +1,11 @@
+program_options:
+  notify_command: i3mount
+
+notifications:
+  device_mounted:   5       # mount notification
+  device_unmounted: 5       # unmount notification
+  device_added:     false   # device has appeared
+  device_removed:   3       # device has disappeared
+  device_unlocked:  false   # encrypted device was unlocked
+  device_locked:    false   # encrypted device was locked
+  job_failed:       false   # mount/unlock/.. has failed
